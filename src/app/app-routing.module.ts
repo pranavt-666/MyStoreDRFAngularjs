@@ -6,7 +6,7 @@ import {Router} from '@angular/router'
 
 const routes: Routes = [
   {path:"", component:LoginComponent},
-  {path:'productlist/', component:ProductListComponent}
+  {path:'productlist', component:ProductListComponent}
 ];
 
 @NgModule({

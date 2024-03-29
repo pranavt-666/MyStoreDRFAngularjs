@@ -1,1 +1,24 @@
-<p>product-list works!</p>
+<div class="container">
+    <div class="row">
+        <!-- <div class="col-4"></div> -->
+        <div class="col-3" *ngFor="let prod of products">
+            <div class="card" style="width: 18rem; ">
+                <img src="{{prod.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{prod.title}}</h5>
+                  <p class="card-text">{{prod.description}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{prod.price}}</li>
+                  <li class="list-group-item">{{prod.category}}</li>
+                  <li class="list-group-item">Rating=>{{prod.rating.rate}}, Number of people rated:{{prod.rating.count}}</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+        </div>
+        <!-- <div class="col-4"></div> -->
+    </div>
+</div>

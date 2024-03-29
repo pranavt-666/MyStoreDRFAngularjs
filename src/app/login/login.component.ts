@@ -28,6 +28,6 @@ export class LoginComponent {
 
   handleLogin(){
     console.log(this.form.value);
-    this.router.navigateByUrl("products")
+    this.router.navigateByUrl("productlist")
   }
 }
