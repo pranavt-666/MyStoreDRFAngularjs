@@ -10,8 +10,10 @@ export class AddReviewComponent {
   form = new FormGroup(
     {
       "review": new FormControl('', Validators.required),
-      "ratign": new FormControl('', Validators.required),
+      "rating": new FormControl('', Validators.required),
     }
   )
-
+  addReviewForm(){
+    console.log(this.form);
+  }
 }
