@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms'
+import { StoreService } from '../services/store.service';
 
 @Component({
   selector: 'app-add-review',
@@ -7,6 +8,11 @@ import {FormGroup, FormControl, Validators} from '@angular/forms'
   styleUrl: './add-review.component.css'
 })
 export class AddReviewComponent {
+  @Input() proid:any;
+  constructor(private service:StoreService){
+    
+  }
+
   form = new FormGroup(
     {
       "review": new FormControl('', Validators.required),
@@ -14,6 +20,8 @@ export class AddReviewComponent {
     }
   )
   addReviewForm(){
-    console.log(this.form);
+    // console.log(this.form);
+    this.service.addProductReview(this.form.value, this.proid)
+    
   }
 }

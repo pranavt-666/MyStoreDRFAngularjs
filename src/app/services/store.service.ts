@@ -35,4 +35,9 @@ export class StoreService {
     console.log(typeof this.reviews.filter(n=>n.pid==id));
     return this.reviews.filter(n=>n.pid==id)
   }
+  addProductReview(data:any, id:any){
+    data['pid']=id
+    this.reviews.push(data)
+    console.log(this.reviews);
+  }
 }
