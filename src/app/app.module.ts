@@ -6,14 +6,18 @@ import { AppComponent } from './app.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component'
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductReviewsComponent } from './product-reviews/product-reviews.component';
+import { AddReviewComponent } from './add-review/add-review.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ProductListComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductReviewsComponent,
+    AddReviewComponent
   ],
   imports: [
     BrowserModule,
