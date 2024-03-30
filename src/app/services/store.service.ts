@@ -9,4 +9,8 @@ export class StoreService {
   getAllProducts(){
     return fetch('https://fakestoreapi.com/products')
   }
+
+  getProductDetail(id:any){
+    return fetch(`https://fakestoreapi.com/products/${id}`)
+  }
 }
